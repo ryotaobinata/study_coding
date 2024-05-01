@@ -102,6 +102,7 @@ int main(void) {
 
 //ABC190
 //problem_B
+/*
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -131,3 +132,132 @@ int main(void) {
 	cout << "No";
 	
 }
+*/
+
+
+/*
+//ABC201
+//problemB
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	vector<pair<string, int>> m_rank(n);
+
+	for (size_t i = 0; i < n; i++)
+	{
+		cin >> m_rank[i].first >> m_rank[i].second;
+	}
+
+	sort(m_rank.begin(), m_rank.end(), [](pair<string,int> a, pair<string, int>b) {
+		return a.second > b.second;
+		});
+
+	cout << m_rank[1].first << endl;
+
+	return 0;
+
+}
+*/
+
+
+/*
+//ABC201
+//problemB
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+	int h, w,x,y;
+	int sx, sy;
+	int count = 0;
+	cin >> h >> w>>x>>y;
+	x = x - 1;
+	y = y - 1;
+	vector<string> map(h);
+	for (size_t i = 0; i < h; i++)
+	{
+		cin >> map[i];
+	}
+	
+	sx = x;
+	sy = y;
+
+	//¶
+	while (1)
+	{
+		if (sy-1>=0)
+			sy--;
+		else
+			break;
+
+		if (map[sx][sy]=='.')
+			count++;
+		else
+			break;
+	}
+
+	sx = x;
+	sy = y;
+	//ã
+	while (1)
+	{
+		if (sx - 1 >= 0)
+			sx--;
+		else
+			break;
+
+		if (map[sx][sy] == '.')
+			count++;
+		else
+			break;
+	}
+
+	sx = x;
+	sy = y;
+	//‰E
+	while (1)
+	{
+		if (sy + 1 < w)
+			sy++;
+		else
+			break;
+
+		if (map[sx][sy] == '.')
+			count++;
+		else
+			break;
+	}
+
+	sx = x;
+	sy = y;
+	//‰º
+	while (1)
+	{
+		if (sx + 1 < h)
+			sx++;
+		else
+			break;
+
+		if (map[sx][sy] == '.')
+			count++;
+		else
+			break;
+	}
+
+	if (map[x][y]=='.')
+	{
+		count++;
+	}
+
+	cout << count<<endl;
+	return 0;
+}*/
