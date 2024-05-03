@@ -261,3 +261,50 @@ int main() {
 	cout << count<<endl;
 	return 0;
 }*/
+
+/*
+//ABC192
+//problemC
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+
+using namespace std;
+
+int g1(string s);
+int g2(string s);
+int f(string s);
+
+int main() {
+	int n,k;
+	string s;
+	cin >> n >> k;
+	s = to_string(n);
+	for (size_t i = 0; i < k; i++)
+	{
+		s=to_string(f(s));
+	}
+
+	cout << stoi(s);
+
+	return 0;
+}
+int g1(string s) {
+	sort(s.begin(), s.end(), [](char a,char b) {
+		return a > b;
+	});
+	return stoi(s);
+}
+int g2(string s) {
+	sort(s.begin(), s.end(), [](char a, char b) {
+		return a < b;
+		});
+	return stoi(s);
+}
+int f(string s) {
+	return g1(s) - g2(s);
+}
+*/
+
+
