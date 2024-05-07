@@ -308,3 +308,56 @@ int f(string s) {
 */
 
 
+/*
+//ABC186
+//problemC
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+
+using namespace std;
+
+bool checkdec(int n);
+bool checkoct(int n);
+
+int main() {
+	int n,count=0;
+	cin >> n;
+	for (size_t i = 1; i <= n; i++)
+	{
+		if ((!checkdec(i))&&(!checkoct(i)))
+		{
+			count++;
+		}
+	}
+
+	cout << count;
+}
+
+bool checkdec(int n)
+{
+	string s;
+	s = to_string(n);
+	if (s.find("7")!=string::npos)
+		return true;
+	else return false;
+}
+
+bool checkoct(int n)
+{
+	string s="";
+	while (1)
+	{
+		s += to_string(n % 8);
+		n = n / 8;
+		if (n==0)
+		{
+			break;
+		}
+	}
+	if (s.find("7")!=string::npos)
+		return true;
+	else return false;
+}
+*/
