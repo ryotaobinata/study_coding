@@ -361,3 +361,42 @@ bool checkoct(int n)
 	else return false;
 }
 */
+
+/*
+//ABC180
+//problemC
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+#include<math.h>
+
+using namespace std;
+
+int main() {
+	size_t n;
+	cin >> n;
+	vector<size_t> div;
+
+	for (size_t i = 1; i*i <= n; i++)
+	{
+		if (n % i == 0) {
+			div.push_back(i);
+			if (i!=n/i)
+			{
+				div.push_back(n / i);
+			}
+			
+		}
+	}
+
+	sort(div.begin(), div.end());
+
+	for (auto x : div)
+	{
+		cout << x << endl;
+	}
+
+}
+*/
+
