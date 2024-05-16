@@ -400,3 +400,73 @@ int main() {
 }
 */
 
+
+/*
+//ABC203
+//problemC
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+#include<math.h>
+
+using namespace std;
+
+int main() {
+	int n,count=0;
+	size_t k;
+	cin >> n >> k;
+	vector<pair<size_t, size_t>> p(n);
+	for (size_t i = 0; i < n; i++)
+	{
+		cin >> p[i].first >> p[i].second;
+	}
+	sort(p.begin(), p.end(), [](pair<size_t, size_t> a, pair<size_t, size_t> b) {
+		return a.first < b.first;
+		});
+	
+	while (count<n&&p[count].first <= k)
+	{
+		k += p[count].second;
+		count++;
+	}
+
+	cout << k;
+	return 0;
+}
+*/
+
+/*
+//ABC148
+//problemC
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+#include<math.h>
+
+using namespace std;
+
+size_t euclid(size_t a, size_t b) {
+	if (a%b!=0)
+	{
+		return euclid(b, a % b);
+	}
+	else
+	{
+		return b;
+	}
+}
+
+int main() {
+	size_t a, b;
+	size_t g_divisor;
+	size_t l_multiple;
+	cin >> a >> b;
+
+	g_divisor=euclid(a, b);
+	l_multiple = (a * b) / g_divisor;
+
+	cout << l_multiple;
+}
+*/
